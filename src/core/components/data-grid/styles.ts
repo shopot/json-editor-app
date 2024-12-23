@@ -59,7 +59,7 @@ export const StyledTable = styled.table<{
   position: absolute;
   top: ${({ $visibleStartIndex, $rowHeight }) => `${$visibleStartIndex * $rowHeight}px`};
   display: grid;
-  grid-template-columns: repeat(${({ $columnsCount }) => `${$columnsCount}`}, minmax(100px, 1fr));
+  grid-template-columns: repeat(${({ $columnsCount }) => `${$columnsCount}`}, minmax(80px, 1fr));
   grid-template-rows: ${({ $rowsCount, $rowHeight }) => `repeat(${$rowsCount}, ${$rowHeight}px)`};
   table-layout: fixed;
   border-collapse: separate;
