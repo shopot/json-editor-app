@@ -19,6 +19,9 @@ git clone https://github.com/shopot/json-editor-app.git
 # Navigate to the `json-editor-app` directory
 cd  json-editor-app
 
+# Install the dependencies
+$ npm install
+
 # Start Vite development server
 $ npm run dev
 ```
