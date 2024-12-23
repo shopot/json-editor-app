@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from '@/app';
 import { EditorDetailDialog, EditorJsonTable, EditorJsonDownloader, EditorFileUploader } from '../components';
 import { setItems } from '../stores';
 
-import jsonData from '@/modules/editor/__mock__/users-data.json';
+import jsonData from '../__mock__/users-data.json';
 
 export const EditorPage = (): JSX.Element => {
   const dispatch = useAppDispatch();
