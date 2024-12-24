@@ -1,29 +1,16 @@
 import { type JSX } from 'react';
 
-import { StyledEditField, StyledFormInput, StyledFormLabel, StyledRadioButton } from './styles';
+import { Box, FormLabel, SwitchRadioButton, TextInput } from '@/core/components';
 import { TValue } from '../../../types';
 
 const getFormInput = (name: string, value: TValue): JSX.Element => {
   switch (typeof value) {
     case 'boolean': {
-      return (
-        <StyledRadioButton>
-          <label>
-            <input type="radio" name={name} value="true" defaultChecked={value} /> Yes
-          </label>
-          <label>
-            <input type="radio" name={name} value="false" defaultChecked={!value} /> No
-          </label>
-        </StyledRadioButton>
-      );
+      return <SwitchRadioButton name={name} defaultChecked={value} />;
     }
 
     default: {
-      return (
-        <StyledFormInput>
-          <input name={name} type={'text'} defaultValue={value} />
-        </StyledFormInput>
-      );
+      return <TextInput name={name} defaultValue={`${value}`} />;
     }
   }
 };
@@ -37,9 +24,9 @@ export const EditField = ({ label, value }: EditFieldProps): JSX.Element => {
   const formInput = getFormInput(label, value);
 
   return (
-    <StyledEditField>
-      <StyledFormLabel>{label}</StyledFormLabel>
+    <Box sx={{ display: 'contents' }}>
+      <FormLabel>{label}</FormLabel>
       {formInput}
-    </StyledEditField>
+    </Box>
   );
 };

@@ -4,6 +4,7 @@ export * from './data-grid';
 export * from './file-input';
 export * from './icon-button';
 export * from './panel';
+export * from './form';
 
 export * from './icons';
 
